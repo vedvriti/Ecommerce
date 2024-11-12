@@ -1,0 +1,68 @@
+
+<ng-container *ngIf="products.length != 0">
+    <div class="card-table">
+        <div class="card-product">
+            <table class="table-responsive">
+                <thead>
+                    <tr>
+                        <th>Sr. No</th>
+                        <th>Name of Product</th>
+                        <th>Product Image</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>   
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{product.name}}</td>
+                        <td><img [src]="product.productImage" alt="{{product.name}}"></td>
+                        <td>{{product.description}}</td>
+                        <td>{{product.price | currency:'INR' }}</td>
+    
+                        <td>
+                            <div class="quantity-controls">
+                              <button class="btn-quantity" (click)="decrementQuantity(product)">-</button>
+                              <input type="number" [value]="product.quantity" value="1" readonly>
+                              <button class="btn-quantity" (click)="incrementQuantity(product)">+</button>
+                            </div>
+                          </td>
+                          
+                        <td>{{product.price * product.quantity | currency:'INR'}}</td>
+                        <td>
+                            <button class="btn-danger" (click)="removeCartItem(product.productId)"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="col justify-content-end">
+                            <button type="button" class="btn btn-outline-danger mt-5" >Empty Cart</button>&nbsp;
+                            <button class="btn btn-outline-secondary mt-5 " routerLink="/">Shop now!</button>&nbsp;
+                            <button class="btn btn-outline-success mt-5">Checkout</button>&nbsp;
+                            <p class="text-end fs-5 fw-semibold">Grand Total:{{grandTotal| currency:'INR'}}</p>
+                        </td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="products.length == 0">
+    <div class="container mt-4">
+    
+            <div class="text-center">
+                <h5 class="title">My Cart</h5>
+            </div>
+        <!-- mb - margin bottom -->
+        <div class="text-center">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/015/842/577/small_2x/empty-states-illustration-concept-on-white-background-vector.jpg" alt="Empty Cart Illustration" class="img-fluid mb-4" style="max-width: 300px;">
+            <h4 class="mb-2">Your cart is empty</h4>
+            <h6 class="mb-2">Add items to it now</h6>
+            <button class="btn btn-secondary mb-4" routerLink="/">Shop Now!</button>
+        </div>
+    </div>
+</ng-container>
+

@@ -1,0 +1,30 @@
+
+      <!-- Navbar -->
+      <header>
+        <div class="navbar bg-secondary shadow">
+          <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size:30px;color:white" class="fas fa-shipping-fast">&nbsp;
+            </i>
+            <strong style="font-size:20px;color:white">LuxeLiving</strong>
+            <div class="form">
+              <input type="text" class="form-control" placeholder="search products">
+            </div>
+            <span class="fas fa-search search-icon"></span>
+            </div>
+      
+                <div class="mb-2">
+                    <a routerLink="/Register" class="btn btn-secondary btn-lg d-flex">Sign in</a>
+                </div>
+                <div class="mb-2">
+                    <a routerLink="/Orders" class="btn btn-secondary btn-lg d-flex">Orders</a>
+                </div>
+          
+         
+            <button class="btn btn primary">
+              <i style="font-size:30px ; color:white" routerLink="/Cart" class="fa-solid fa-cart-shopping "></i>
+             <div style="font-size:10px" class="badge bg-danger">{{totalItem}}</div>
+            </button>
+        </div>
+      </header>
+
+      

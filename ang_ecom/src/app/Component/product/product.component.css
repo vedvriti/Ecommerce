@@ -1,0 +1,103 @@
+.card-top{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+    word-wrap:break-word;
+    background: white;
+    background-clip: border-box;
+    border:1px solid;
+    border-radius:.25rem
+}
+.item img{
+    width:64px;
+}
+.item{
+    margin: 0px 15px;
+    text-align: center;
+}
+
+.w-100 {
+    height: 400px; /* Adjust height as needed */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555;
+}
+
+.btn-primary {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+}
+.headline {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.subheadline {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light background color */
+}
+.hero-content {
+    max-width: 500px;
+    text-align: left;
+}
+.hero-img {
+    background-image: url('https://img.freepik.com/premium-photo/stylish-living-room-with-lamp-sofa-yellow-furnishings-with-scandinavian-aesthetic_872147-11895.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.hero-img1{
+    background-image: url('https://www.channelnews.com.au/wp-content/uploads/2017/01/H9_Web_Grid_Gallery_05.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.hero-img2{
+    background-image: url('https://www.sephora.ae/dw/image/v2/BKWK_PRD/on/demandware.static/-/Library-Sites-SephoraV2/default/dw2cb79dca/brands/Brand_Page/RAREBEAUTY/SU24-SPLuminousPowderBlush-BrandPageBanner-900x575-27032024.jpg?q=75'); 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
